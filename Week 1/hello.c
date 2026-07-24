@@ -6,5 +6,10 @@ int main(void)
     printf("Whats your name?");
     scanf("%s", name);
 
-    printf("Hello %s, how are you doing?\n", name);
+    int age; 
+    printf("How old are you?");
+    scanf("%d", &age);
+
+
+    printf("Hello %s, You're %d years old.\n", name,age);
 }
