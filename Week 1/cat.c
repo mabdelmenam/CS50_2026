@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void meow(int n); //prototype
+
 int main(void){
     int i;
 
@@ -23,5 +25,13 @@ int main(void){
     
     for(int i = 0; i < z; i++){
         printf("N Iteration: %d\n", i);
+    }
+
+    meow(10);
+}
+
+void meow(int n){
+    for(int i = 0;i<n;i++){
+        printf("meowFunction %d\n", i);
     }
 }
