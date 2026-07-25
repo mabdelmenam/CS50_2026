@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 void meow(int n); //prototype
+int get_n(void);
 
 int main(void){
     int i;
@@ -28,8 +29,23 @@ int main(void){
     }
 
     meow(10);
+    printf("meowFunction END!\n\n");
+
+    int num = get_n();
+    meow(num);
 }
 
+//function to get the value of n
+int get_n(void){
+    int n;
+    do{
+        printf("What is the value of n?\n");
+        scanf("%d", &n);
+    }while (n < 0 || n == 0);
+
+    return n;
+}
+//function to print meow n times
 void meow(int n){
     for(int i = 0;i<n;i++){
         printf("meowFunction %d\n", i);
